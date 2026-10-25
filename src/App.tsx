@@ -5,6 +5,7 @@ import { createDefaultOpenAIProfile, hasDefaultPresetConfig, isAgentTextApiProfi
 import { getCustomProviderConfigUrl, hasEmbeddedDefaultConfig, loadCustomProviderSettingsFromUrl, loadEmbeddedDefaultConfig } from './lib/customProviderConfigUrl'
 import { getDefaultPresetProfileId, getPresetProfileIds, isPresetConfigOnlyEnabled, setPresetConfig } from './lib/presetConfig'
 import { useDockerApiUrlMigrationNotice } from './hooks/useDockerApiUrlMigrationNotice'
+import { useEmbeddedApiKey } from './hooks/useEmbeddedApiKey'
 import { useAppFonts } from './hooks/useAppFonts'
 import { useColorMode } from './hooks/useColorMode'
 import { useCloseConfirm } from './hooks/useCloseConfirm'
@@ -53,6 +54,7 @@ export default function App() {
   const settingsModalEpoch = useStore((s) => s.settingsModalEpoch)
   const [startupImportDone, setStartupImportDone] = useState(false)
   useDockerApiUrlMigrationNotice()
+  useEmbeddedApiKey()
   useAppFonts()
   useColorMode()
   useGlobalClickSuppression()
