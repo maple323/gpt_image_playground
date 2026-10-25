@@ -1,0 +1,13 @@
+{
+  "profiles": [
+    {
+      "id": "799886",
+      "name": "799886 生图",
+      "provider": "openai",
+      "baseUrl": "https://799886.xyz/v1",
+      "model": "gpt-image-2.5-sunburst",
+      "apiMode": "images",
+      "isDefault": true
+    }
+  ]
+}
